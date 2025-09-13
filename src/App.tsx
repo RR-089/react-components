@@ -1,11 +1,16 @@
-import Label from "./components/Label";
+import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="h-screen flex justify-center items-center flex-col">
-      <Label text="Hello World" size="lg" />
-      <Label text="This is Red" size="sm" color="red" />
-    </div>
+    <main className="flex justify-center items-center h-screen gap-4 p-4">
+      <Button onClick={() => alert("Primary clicked!")}>Primary</Button>
+      <Button variant="secondary" onClick={() => alert("Secondary clicked!")}>
+        Secondary
+      </Button>
+      <Button variant="outline" onClick={() => alert("Outline clicked!")}>
+        Outline
+      </Button>
+    </main>
   );
 }
 
